@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+server/node_modules/
+
+# runtime data (SQLite) — the app seeds demo data itself
+*.db
+server/data.db
+
+# logs / OS
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db

@@ -1,0 +1,15 @@
+{
+  "name": "workwell-return-server",
+  "version": "1.1.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Example Express + SQLite backend for the WorkWell Return prototype (REST + WebSocket + JWT).",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "ws": "^8.18.0"
+  }
+}

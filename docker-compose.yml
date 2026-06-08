@@ -1,0 +1,21 @@
+# One command to start the whole thing:  docker compose up --build
+# -> WorkWell Return (SPA + REST API + WebSocket) on http://localhost:8787
+services:
+  workwell:
+    build: .
+    container_name: workwell-return
+    ports:
+      - "8787:8787"
+    environment:
+      WW_JWT_SECRET: "dev-secret-change-me"   # set -> JWT auth required
+      WW_RESEARCHER_PW: "research"
+      WW_PARTICIPANT_PW: "demo"
+      STATIC_DIR: "/app"
+      DB_PATH: "/data/data.db"
+      PORT: "8787"
+    volumes:
+      - ww-data:/data                          # SQLite persistence
+    restart: unless-stopped
+
+volumes:
+  ww-data:

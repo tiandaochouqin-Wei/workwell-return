@@ -1,0 +1,13 @@
+{
+  "name": "WorkWell Return",
+  "short_name": "WorkWell",
+  "description": "A research prototype to help prepare for a sustainable return to work. Demo data only; not medical advice.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f5f7f9",
+  "theme_color": "#0f766e",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

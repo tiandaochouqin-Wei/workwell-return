@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>WorkWell Return — Digital Health Research Prototype</title>
+<meta name="description" content="WorkWell Return: a research prototype that helps people on sick leave reflect on work readiness, track work ability and symptom burden, set goals, and share structured information with researchers. Not a medical device. Demo data only." />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#0f766e" />
+
+<!-- Inline SVG favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Cpath d='M14 34h9l4-9 6 18 5-12 3 6h9' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="stylesheet" href="css/styles.css" />
+
+<!-- Set theme before paint to avoid flash -->
+<script>
+  try{
+    var t = localStorage.getItem('ww-theme');
+    if(t){ document.documentElement.setAttribute('data-theme', t); }
+    else if(window.matchMedia && matchMedia('(prefers-color-scheme:dark)').matches){
+      document.documentElement.setAttribute('data-theme','dark');
+    }
+    var ac = localStorage.getItem('ww-accent');
+    if(ac){ document.documentElement.setAttribute('data-accent', ac); }
+    var fs = localStorage.getItem('ww-fontsize'); if(fs){ document.documentElement.setAttribute('data-fontsize', fs); }
+    if(localStorage.getItem('ww-contrast') === 'high'){ document.documentElement.setAttribute('data-contrast','high'); }
+    if(localStorage.getItem('ww-motion') === 'reduced'){ document.documentElement.setAttribute('data-motion','reduced'); }
+  }catch(e){}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#app-main">Skip to content</a>
+
+<header class="appbar" id="appbar">
+  <div class="appbar-inner">
+    <a class="brand" href="#/home" aria-label="WorkWell Return home">
+      <span class="brand-logo" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="26" height="26"><rect width="64" height="64" rx="14" fill="currentColor"/><path d="M14 34h9l4-9 6 18 5-12 3 6h9" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand-name">WorkWell&nbsp;Return</span>
+      <span class="pill" id="brandPill" title="This is a non-clinical research prototype">Research prototype</span>
+    </a>
+    <div class="appbar-actions">
+      <div id="roleswitch" class="roleswitch" role="group" aria-label="Prototype view"></div>
+      <button id="searchBtn" class="iconbtn" aria-label="Search (Ctrl/Cmd+K)" title="Search (Ctrl/Cmd+K)">🔍</button>
+      <button id="bellBtn" class="iconbtn" aria-label="Notifications" title="Notifications">🔔</button>
+      <button id="langBtn" class="iconbtn" aria-label="Switch language" title="Switch language">中</button>
+      <button id="themeBtn" class="iconbtn" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+  <nav id="appnav" class="appnav" aria-label="Main navigation"></nav>
+</header>
+
+<main id="app-main" class="container" tabindex="-1"></main>
+
+<footer class="appfoot">
+  <div class="container">
+    <strong>WorkWell Return</strong> is a research prototype for university digital-health research.
+    It does <strong>not</strong> provide medical diagnosis, advice, or treatment, and is not a substitute
+    for a healthcare professional. All information shown is <strong>demo data</strong>.
+    <span class="demo-badge" id="resetDemo" role="button" tabindex="0" title="Reset all demo data">↺ Reset demo data</span>
+  </div>
+</footer>
+
+<noscript>
+  <div class="container" style="padding:24px">WorkWell Return needs JavaScript enabled to run.</div>
+</noscript>
+
+<!-- Modular scripts: core → schema → demo → charts → views → bootstrap -->
+<script src="js/core.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/schema.js"></script>
+<script src="js/demo-data.js"></script>
+<script src="js/api.js"></script>
+<script src="js/realtime.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/views/onboarding.js"></script>
+<script src="js/views/home.js"></script>
+<script src="js/views/checkin.js"></script>
+<script src="js/views/goals.js"></script>
+<script src="js/views/plan.js"></script>
+<script src="js/views/reminders.js"></script>
+<script src="js/views/dashboard.js"></script>
+<script src="js/views/researcher.js"></script>
+<script src="js/views/questionnaire.js"></script>
+<script src="js/views/more.js"></script>
+<script src="js/views/activity.js"></script>
+<script src="js/views/graded.js"></script>
+<script src="js/views/toolbox.js"></script>
+<script src="js/views/insights.js"></script>
+<script src="js/views/report.js"></script>
+<script src="js/views/resources.js"></script>
+<script src="js/views/profile.js"></script>
+<script src="js/views/help.js"></script>
+<script src="js/views/login.js"></script>
+<script src="js/app.js"></script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}</script>
+</body>
+</html>
