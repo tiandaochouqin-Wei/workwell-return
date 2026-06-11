@@ -12,6 +12,38 @@ digital-health research.
 
 ---
 
+**▶ Live demo:** https://tiandaochouqin-wei.github.io/workwell-return/
+
+## Screenshots
+
+### Participant app
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><b>1 · Home</b><br/>customizable, drag-reorder dashboard<br/><img src="docs/screenshots/1-home.png" alt="Home dashboard"/></td>
+    <td width="50%" valign="top"><b>2 · Daily check-in</b><br/>work ability, symptom burden, readiness, barriers<br/><img src="docs/screenshots/2-checkin.png" alt="Daily check-in"/></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>3 · Progress</b><br/>check-in calendar, work-ability &amp; symptom trends, scores<br/><img src="docs/screenshots/3-progress.png" alt="Progress"/></td>
+    <td valign="top"><b>4 · Questionnaires</b><br/>RTW-SE, WAI, PHQ-9, GAD-7, PEG with scoring &amp; trends<br/><img src="docs/screenshots/4-questionnaires.png" alt="Questionnaires"/></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top"><b>5 · “More” hub</b> — goals, activity &amp; pacing diary, graded-return planner, coping toolbox, insights, shareable report, resources<br/><img src="docs/screenshots/5-more-hub.png" alt="More hub"/></td>
+  </tr>
+</table>
+
+### Researcher dashboard (anonymised)
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><b>6 · Overview</b><br/>cohort stats, weekly mean trends, condition breakdown, adherence<br/><img src="docs/screenshots/6-researcher-overview.png" alt="Researcher overview"/></td>
+    <td width="50%" valign="top"><b>7 · Analytics</b><br/>regression &amp; Pearson <i>r</i>, correlation matrix, Cohen's <i>d</i><br/><img src="docs/screenshots/7-researcher-analytics.png" alt="Analytics"/></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top"><b>8 · Participants</b><br/>sortable coded-ID table with sparklines, drill-down &amp; study-arm management<br/><img src="docs/screenshots/8-participants.png" alt="Participants"/></td>
+  </tr>
+</table>
+
 ## Run it
 
 **Option A — just open it.** Double-click `index.html`. The app uses plain scripts (no build,
